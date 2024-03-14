@@ -59,7 +59,7 @@
                 <div class="fs-19 pt-3" style="font-weight:500">Is this including full source code?</div>
                 <p>Yes. You will get the full source code after purchasing the item.</p>
                 <div class="fs-19 pt-3" style="font-weight:500">When can I download the files after purchase the item?</div>
-                <p>You can download the files immediately after successfully purchasing the item. For more information, you may read this Envato article: How to download your items – Envato Market Help Center.</p>
+                <p>You can download the files immediately after successfully purchasing the item. For more information, you may read <a href="https://help.market.envato.com/hc/en-us/articles/202501014-How-to-download-your-items" target="_blank">this Envato article: How to download your items – Envato Market Help Center</a>.</p>
                 <div class="fs-19 pt-3" style="font-weight:500">Can I edit or remove the Copyright text at the footer?</div>
                 <p>Yes, you can. Go to <code>"/Views/Shared/_Footer.cshtml"</code> and find the footer section to edit or remove the copyright text.</p>
                 <div class="fs-19 pt-3" style="font-weight:500">How is the support policy?</div>
@@ -98,10 +98,10 @@
                 <p>MS SQL</p>
                 <div class="fs-19 pt-3" style="font-weight:500">Where can I download the purchase invoice?</div>
                 <p>You can get answers to all of the Envato platform-related questions here: <a href="https://help.market.envato.com/hc/en-us" target="_blank">Envato Help Center</a></p>
-                
+
                 <h3 class="mt-5 fs-26 border-bottom pb-2">Editing the code</h3>
                 <div class="fs-19 pt-3" style="font-weight:500">How to change color?</div>
-                <p>Open <code>/wwwroot/style.css</code> in Visual Studio. Edit the :root values on top.</p>
+                <p>Open <code>/wwwroot/style.css</code> in Visual Studio. Edit the <code>:root</code> values on top.</p>
                 <div class="fs-19 pt-3" style="font-weight:500">How to change password validation?</div>
                 <p>
                     The password validation in the project is as below:
@@ -115,12 +115,24 @@
                     Follow the steps below to change the validation criteria.
                     <ol>
                         <li>Open <code>/Models/Extensions.cs</code> in Visual Studio</li>
-                        <li>Go to public class PasswordValidation</li>
+                        <li>Go to <code>public class PasswordValidation</code></li>
                         <li>Remove the validation code that you don’t want. You can change the error message too.</li>
                     </ol>
                 </p>
                 <div class="fs-19 pt-3" style="font-weight:500">How do I edit the paging’s code?</div>
                 <p>Paging’s related file is at <code>/Views/Shared/_Paging.cshtml</code></p>
+
+                <div class="fs-19 pt-3" style="font-weight:500">How do I add an extra column to the translation history table?</div>
+                <p>
+                    <ol>
+                        <li>Go to <code>/Views/Translation/_MainList.cshtml</code></li>
+                        <li>Scroll down to <code>tbody</code> part, add extra <code>td</code> inside the <code>tbody</code></li>
+                        <li>Then, go to <code>/Utils/ListUtil.cs</code></li>
+                        <li>Scroll down to <code>public class TranslationListConfig</code>, add your new column's <code>nameof</code> property</li>
+                        <li>Go to <code>/Controllers/TranslationController.cs</code></li>
+                        <li>Scroll down to <code>ReadTranslations</code> method, add your new column</li>
+                    </ol>
+                </p>
 
                 <h3 id="error" class="mt-5 fs-26 border-bottom pb-2">Solving errors</h3>
                 <div class="fs-19 pt-3" style="font-weight:500">
@@ -137,5 +149,4 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
 </body>
-
 </html>
